@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated aurora gradient -->
+  <div class="bg-aurora"></div>
+  <!-- Floating blobs -->
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+
+  <main class="wrap">
+    <header class="title">
+      <span class="dot"></span>
+      <h1>Weather</h1>
+      <span class="dot"></span>
+    </header>
+
+    <section class="card">
+      <div class="controls">
+        <form id="search-form">
+          <input id="city-input" type="text" placeholder="Search city (e.g. Tokyo)" aria-label="City name"/>
+          <button class="btn" type="submit">Search</button>
+        </form>
+        <div class="actions">
+          <button id="geo-btn" class="btn ghost" type="button">Use My Location</button>
+          <button id="unit-btn" class="btn ghost" data-unit="metric" type="button">°C</button>
+        </div>
+      </div>
+
+      <div id="current" class="current">
+        <div class="left">
+          <div id="icon" class="wx-icon" aria-hidden="true">⛅</div>
+          <div>
+            <h2 id="place">—</h2>
+            <p id="desc">No-API demo weather</p>
+            <p id="time">—</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="temp">
+            <span id="temp">—</span><span class="deg">°</span>
+          </div>
+          <div class="mini">
+            <span id="minmax">—</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <div class="chip"><span>💨</span> <strong id="wind">—</strong></div>
+        <div class="chip"><span>💧</span> <strong id="humidity">—</strong></div>
+        <div class="chip"><span>🌡️</span> <strong id="feels">—</strong></div>
+        <div class="chip"><span>📈</span> <strong id="pressure">—</strong></div>
+      </div>
+
+      <h3 class="subttl">Next hours</h3>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
